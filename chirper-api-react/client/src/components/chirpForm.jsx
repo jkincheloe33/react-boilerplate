@@ -15,7 +15,7 @@ class ChirpForm extends Component {
 
     render() {
         return (
-            <form className="card p-3 m-1">
+            <form className="card p-3 m-1 bg-alert-primary d-block">
                 <label
                     htmlFor="chirp-input"
                     className="d-block m-2">Create a Chirp:
@@ -29,7 +29,7 @@ class ChirpForm extends Component {
                 <button
                     onClick={() => { this.props.postChirp(this.state.chirp) }}
                     type="button"
-                    className="btn btn-primary m-2">Post!
+                    className="SubmitBtn d-block m-2 w-100 btn btn-outline-info">Post!
                 </button>
             </form>
         );

@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import Header from './header';
 import Chirps from './chirps';
-import GoodbyeWorld from './goodbye';
+import ChirpCard from './chirpCard';
 
 class Navigation extends Component {
     render() {
@@ -10,10 +10,10 @@ class Navigation extends Component {
             <Router>
                 <Fragment>
                     <Header />
-                    <Link to="/goodbye">Goodbye</Link>
+                    
                     <Switch>
                         <Route exact path="/" component={Chirps} />
-                        <Route path="/goodbye" component={GoodbyeWorld} />
+                        <Route exact path="/chirps/:id" component={ChirpCard} />
                     </Switch>
                 </Fragment>
             </Router>

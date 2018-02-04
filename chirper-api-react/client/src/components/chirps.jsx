@@ -8,11 +8,20 @@ class Chirps extends Component {
 
         this.state = {
             chirps: [
-                { text: 'FIRST TWEE-- ERR, I MEAN CHIRP!', id: 0 },
-                { text: 'SECOND CHIRP OMG', id: 1 },
-                { text: 'SUCH CHIRP! MUCH WOW!', id: 2 },
+                { 
+                    text: 'FIRST TWEE-- ERR, I MEAN CHIRP!', 
+                    id: 0 
+                },
+                { 
+                    text: 'SECOND CHIRP OMG', 
+                    id: 1 
+                },
+                { 
+                    text: 'SUCH CHIRP! MUCH WOW!', 
+                    id: 2 
+                },
             ]
-        };
+        }; 
     }
 
     componentDidMount() {
@@ -63,8 +72,12 @@ class Chirps extends Component {
     render() {
         return (
             <div className="container">
-                <ChirpForm postChirp={(text) => { this.addChirp(text); }} />
-                <ChirpList chirps={this.state.chirps} />
+                    <ChirpForm postChirp={(text) => { this.addChirp(text); }} />
+                    
+                
+                    <ChirpList chirps={this.state.chirps} />
+                    
+                
             </div>
         );
     }
